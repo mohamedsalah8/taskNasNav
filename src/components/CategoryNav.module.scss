@@ -1,0 +1,31 @@
+@import "../index.scss";
+
+
+
+.categoryTabs {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 20px 0;
+
+  .categoryNav {
+    @extend %container;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+
+    ul {
+      display: flex;
+      gap: 4px;
+
+      @media (max-width:767px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    li:not(:last-child) {
+      text-decoration: underline;
+    }
+  }
+
+}

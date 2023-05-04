@@ -1,0 +1,83 @@
+@import "../index.scss";
+
+.middleHead {
+  background-color: #fff;
+  padding: 11.5px 0;
+
+  .mainHead {
+    @extend %container;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:768px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .searchInp {
+    position: relative;
+    @media (max-width:768px) {
+      order: 3;
+    }
+
+    input {
+      background-color: transparent;
+      width: 350px;
+      height: 48px;
+      border: 0.5px solid #D8D8D8;
+      padding-left: 2.5rem;
+      border-radius: 24px;
+      font-size: 16px;
+    }
+
+    input::placeholder {
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+
+      img {
+        max-width: 22px;
+      }
+    }
+  }
+
+  .iconsProduct {
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+
+    li {
+      @extend %flex-center;
+      gap: 0.5rem;
+      cursor: pointer;
+
+      div {
+        position: relative;
+
+        div {
+          font-size: 12px;
+          display: inline;
+          position: absolute;
+          top: -6px;
+          left: 21px;
+          width: 15px;
+          height: 15px;
+          text-align: center;
+          background-color: $primary-color;
+          border-radius: 20px;
+          z-index: 100;
+        }
+      }
+    }
+  }
+}
